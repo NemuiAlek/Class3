@@ -1,0 +1,150 @@
+/* you normally want to design for mobile first, then for desktop */
+
+*{
+    font-family: 'Permanent Marker', cursive;
+}
+
+body {
+    margin: 0;
+    padding: 4.5rem 6rem 0;
+    background-color:dimgray;
+    width: auto;
+}
+
+a:link {
+    color:purple;
+}
+a:visited {
+    color:plum;
+}
+a:hover {
+    color:purple;
+}
+
+nav{
+    background-color:black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 96vw;
+    padding: 0 2vw;
+    height: 4.5rem;
+    /* fexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div:nth-child(2) {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24%;
+    
+}
+
+nav div:nth-child(3) {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8%;
+}
+
+/* flexbox - to center content with an element */
+/* diplay: flex;
+        align-itmes:center;
+        justify-content: center; */
+/* nav a:nth=child(1) img {
+    width: 6rem;
+} */
+
+nav > a img {
+    width: 3rem;
+}
+
+nav div#auth-links a.logout {
+    /* visibility:none; */
+    display:none;
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;  
+}
+
+.container div.box {
+    width: 24vw;
+    margin-bottom:15px;
+    border: 1px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container div.box > img {
+    width: 100%;
+}
+
+.container div.box div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+
+@media only screen and (max-width: 412px){
+    .container{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container div.box {
+        width: 50vw;
+        margin-bottom:15px;
+        border: 1px solid black;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    nav{
+        background-color:black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 96vw;
+        padding: 0 2vw;
+        height: 4.5rem;
+        /* fexbox */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav > a img {
+        width: 3rem;
+    }
+
+    nav div:nth-child(2) {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 2%;
+        
+    }
+    
+    nav div:nth-child(3) {
+        display:flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 2%;
+    }
+}
